@@ -69,6 +69,7 @@
 		F1240AD82AEA909100FE3C3E /* LevelsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AD72AEA909100FE3C3E /* LevelsCollectionViewCell.swift */; };
 		F1240ADA2AEA909F00FE3C3E /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AD92AEA909F00FE3C3E /* SectionType.swift */; };
 		F1240ADD2AEA939400FE3C3E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240ADC2AEA939400FE3C3E /* GameViewController.swift */; };
+		F1240ADF2AEA9AF900FE3C3E /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240ADE2AEA9AF900FE3C3E /* GameCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		F1240AD72AEA909100FE3C3E /* LevelsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1240AD92AEA909F00FE3C3E /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
 		F1240ADC2AEA939400FE3C3E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F1240ADE2AEA9AF900FE3C3E /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				F1240ADC2AEA939400FE3C3E /* GameViewController.swift */,
+				F1240ADE2AEA9AF900FE3C3E /* GameCollectionViewCell.swift */,
 			);
 			path = GameModule;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				F1240A7E2AEA26E500FE3C3E /* ExternalService.swift in Sources */,
 				F1240A462AEA1E9600FE3C3E /* SceneDelegate.swift in Sources */,
 				F1240AC12AEA4AB100FE3C3E /* MainViewController.swift in Sources */,
+				F1240ADF2AEA9AF900FE3C3E /* GameCollectionViewCell.swift in Sources */,
 				F1240A642AEA21CF00FE3C3E /* AppImage.swift in Sources */,
 				F1240A782AEA269900FE3C3E /* LoadingViewController.swift in Sources */,
 				F1240AD62AEA907F00FE3C3E /* LevelsViewController.swift in Sources */,

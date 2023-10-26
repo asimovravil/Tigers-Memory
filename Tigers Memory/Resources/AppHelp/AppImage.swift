@@ -61,6 +61,7 @@ enum AppImage: String, AppImageProtocol {
     case backgroundWin
     case backgroundNewProgress
     case backgroundWheel
+    case backgroundGame
     
     // MARK: - Levels
     
