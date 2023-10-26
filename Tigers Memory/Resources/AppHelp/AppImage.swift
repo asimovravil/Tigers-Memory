@@ -50,6 +50,7 @@ enum AppImage: String, AppImageProtocol {
     case rewardChair
     case rewardCat
     case rewardFrog
+    case fortuna
     
     // MARK: - Background
     
@@ -59,4 +60,5 @@ enum AppImage: String, AppImageProtocol {
     case backgroundProgress
     case backgroundWin
     case backgroundNewProgress
+    case backgroundWheel
 }

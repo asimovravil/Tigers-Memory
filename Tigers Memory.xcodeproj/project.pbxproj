@@ -64,6 +64,7 @@
 		F1240ACA2AEA61D700FE3C3E /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC92AEA61D700FE3C3E /* ProgressViewController.swift */; };
 		F1240ACD2AEA8BB600FE3C3E /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240ACC2AEA8BB600FE3C3E /* WinViewController.swift */; };
 		F1240AD02AEA8BFC00FE3C3E /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240ACF2AEA8BFC00FE3C3E /* RewardsViewController.swift */; };
+		F1240AD32AEA8E2E00FE3C3E /* WheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AD22AEA8E2E00FE3C3E /* WheelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		F1240AC92AEA61D700FE3C3E /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		F1240ACC2AEA8BB600FE3C3E /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		F1240ACF2AEA8BFC00FE3C3E /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
+		F1240AD22AEA8E2E00FE3C3E /* WheelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				F1240AC22AEA4E2800FE3C3E /* RulesModule */,
 				F1240AC52AEA50B600FE3C3E /* ShopModule */,
 				F1240AC82AEA61C000FE3C3E /* ProgressModule */,
+				F1240AD12AEA8E1C00FE3C3E /* WheelModule */,
 				F1240ACB2AEA8B9800FE3C3E /* WinModule */,
 				F1240ACE2AEA8BE200FE3C3E /* RewardsModule */,
 			);
@@ -300,6 +303,14 @@
 				F1240ACF2AEA8BFC00FE3C3E /* RewardsViewController.swift */,
 			);
 			path = RewardsModule;
+			sourceTree = "<group>";
+		};
+		F1240AD12AEA8E1C00FE3C3E /* WheelModule */ = {
+			isa = PBXGroup;
+			children = (
+				F1240AD22AEA8E2E00FE3C3E /* WheelViewController.swift */,
+			);
+			path = WheelModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +432,7 @@
 			files = (
 				F1240AC42AEA4E7000FE3C3E /* RulesViewController.swift in Sources */,
 				F1240AD02AEA8BFC00FE3C3E /* RewardsViewController.swift in Sources */,
+				F1240AD32AEA8E2E00FE3C3E /* WheelViewController.swift in Sources */,
 				F1240ACD2AEA8BB600FE3C3E /* WinViewController.swift in Sources */,
 				F1240A482AEA1E9600FE3C3E /* SplashViewController.swift in Sources */,
 				F1240AC72AEA50E100FE3C3E /* ShopViewController.swift in Sources */,
