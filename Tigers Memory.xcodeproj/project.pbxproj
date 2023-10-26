@@ -59,6 +59,7 @@
 		F1240ABC2AEA3C0100FE3C3E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F1240ABB2AEA3C0100FE3C3E /* FirebaseStorage */; };
 		F1240ABE2AEA3C0100FE3C3E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F1240ABD2AEA3C0100FE3C3E /* FirebaseStorageCombine-Community */; };
 		F1240AC12AEA4AB100FE3C3E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC02AEA4AB100FE3C3E /* MainViewController.swift */; };
+		F1240AC42AEA4E7000FE3C3E /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC32AEA4E7000FE3C3E /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		F1240A7B2AEA26D900FE3C3E /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		F1240A7D2AEA26E500FE3C3E /* ExternalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalService.swift; sourceTree = "<group>"; };
 		F1240AC02AEA4AB100FE3C3E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F1240AC32AEA4E7000FE3C3E /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				F1240A762AEA267900FE3C3E /* SplashScreen */,
 				F1240ABF2AEA4A9E00FE3C3E /* MainModule */,
+				F1240AC22AEA4E2800FE3C3E /* RulesModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +248,14 @@
 				F1240AC02AEA4AB100FE3C3E /* MainViewController.swift */,
 			);
 			path = MainModule;
+			sourceTree = "<group>";
+		};
+		F1240AC22AEA4E2800FE3C3E /* RulesModule */ = {
+			isa = PBXGroup;
+			children = (
+				F1240AC32AEA4E7000FE3C3E /* RulesViewController.swift */,
+			);
+			path = RulesModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1240AC42AEA4E7000FE3C3E /* RulesViewController.swift in Sources */,
 				F1240A482AEA1E9600FE3C3E /* SplashViewController.swift in Sources */,
 				F1240A622AEA21BC00FE3C3E /* AppColor.swift in Sources */,
 				F1240A442AEA1E9600FE3C3E /* AppDelegate.swift in Sources */,

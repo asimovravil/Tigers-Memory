@@ -118,7 +118,8 @@ final class MainViewController: UIViewController {
     }
     
     @objc private func rulesButtonTapped() {
-        
+        let controller = RulesViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func progressButtonTapped() {
