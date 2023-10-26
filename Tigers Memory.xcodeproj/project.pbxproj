@@ -68,6 +68,7 @@
 		F1240AD62AEA907F00FE3C3E /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AD52AEA907F00FE3C3E /* LevelsViewController.swift */; };
 		F1240AD82AEA909100FE3C3E /* LevelsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AD72AEA909100FE3C3E /* LevelsCollectionViewCell.swift */; };
 		F1240ADA2AEA909F00FE3C3E /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AD92AEA909F00FE3C3E /* SectionType.swift */; };
+		F1240ADD2AEA939400FE3C3E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240ADC2AEA939400FE3C3E /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		F1240AD52AEA907F00FE3C3E /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 		F1240AD72AEA909100FE3C3E /* LevelsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1240AD92AEA909F00FE3C3E /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
+		F1240ADC2AEA939400FE3C3E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				F1240A762AEA267900FE3C3E /* SplashScreen */,
 				F1240ABF2AEA4A9E00FE3C3E /* MainModule */,
 				F1240AD42AEA906C00FE3C3E /* LevelsModule */,
+				F1240ADB2AEA937E00FE3C3E /* GameModule */,
 				F1240AC22AEA4E2800FE3C3E /* RulesModule */,
 				F1240AC52AEA50B600FE3C3E /* ShopModule */,
 				F1240AC82AEA61C000FE3C3E /* ProgressModule */,
@@ -330,6 +333,14 @@
 			path = LevelsModule;
 			sourceTree = "<group>";
 		};
+		F1240ADB2AEA937E00FE3C3E /* GameModule */ = {
+			isa = PBXGroup;
+			children = (
+				F1240ADC2AEA939400FE3C3E /* GameViewController.swift */,
+			);
+			path = GameModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,6 +466,7 @@
 				F1240ADA2AEA909F00FE3C3E /* SectionType.swift in Sources */,
 				F1240AC72AEA50E100FE3C3E /* ShopViewController.swift in Sources */,
 				F1240AD82AEA909100FE3C3E /* LevelsCollectionViewCell.swift in Sources */,
+				F1240ADD2AEA939400FE3C3E /* GameViewController.swift in Sources */,
 				F1240ACA2AEA61D700FE3C3E /* ProgressViewController.swift in Sources */,
 				F1240A622AEA21BC00FE3C3E /* AppColor.swift in Sources */,
 				F1240A442AEA1E9600FE3C3E /* AppDelegate.swift in Sources */,

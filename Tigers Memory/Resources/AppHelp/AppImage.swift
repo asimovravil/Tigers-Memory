@@ -73,4 +73,21 @@ enum AppImage: String, AppImageProtocol {
     case level6
     case level7
     case level8
+    
+    // MARK: - Game
+    
+    case chairCell
+    case coinCell
+    case boxCell
+    case frogCell
+    case inyanCell
+    case cloudCell
+    case petrCell
+    case flagCell
+    case megaballsCell
+    case orangeCell
+    case fishCell
+    case crazyCell
+    case houseCell
+    case cell
 }
