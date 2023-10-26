@@ -9,20 +9,22 @@
 /* Begin PBXBuildFile section */
 		F1240A442AEA1E9600FE3C3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240A432AEA1E9600FE3C3E /* AppDelegate.swift */; };
 		F1240A462AEA1E9600FE3C3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240A452AEA1E9600FE3C3E /* SceneDelegate.swift */; };
-		F1240A482AEA1E9600FE3C3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240A472AEA1E9600FE3C3E /* ViewController.swift */; };
+		F1240A482AEA1E9600FE3C3E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240A472AEA1E9600FE3C3E /* SplashViewController.swift */; };
 		F1240A4D2AEA1E9800FE3C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1240A4C2AEA1E9800FE3C3E /* Assets.xcassets */; };
 		F1240A502AEA1E9800FE3C3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1240A4E2AEA1E9800FE3C3E /* LaunchScreen.storyboard */; };
 		F1240A5E2AEA216100FE3C3E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1240A5D2AEA216100FE3C3E /* Colors.xcassets */; };
 		F1240A622AEA21BC00FE3C3E /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240A612AEA21BC00FE3C3E /* AppColor.swift */; };
 		F1240A642AEA21CF00FE3C3E /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240A632AEA21CF00FE3C3E /* AppImage.swift */; };
 		F1240A672AEA222900FE3C3E /* chowfun.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1240A662AEA222900FE3C3E /* chowfun.ttf */; };
+		F1240A6A2AEA22AE00FE3C3E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F1240A692AEA22AE00FE3C3E /* SnapKit */; };
+		F1240A6C2AEA22AE00FE3C3E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F1240A6B2AEA22AE00FE3C3E /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F1240A402AEA1E9600FE3C3E /* Tigers Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tigers Memory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1240A432AEA1E9600FE3C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1240A452AEA1E9600FE3C3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F1240A472AEA1E9600FE3C3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1240A472AEA1E9600FE3C3E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		F1240A4C2AEA1E9800FE3C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1240A4F2AEA1E9800FE3C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1240A512AEA1E9800FE3C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1240A6A2AEA22AE00FE3C3E /* SnapKit in Frameworks */,
+				F1240A6C2AEA22AE00FE3C3E /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +87,7 @@
 		F1240A582AEA200500FE3C3E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F1240A472AEA1E9600FE3C3E /* ViewController.swift */,
+				F1240A472AEA1E9600FE3C3E /* SplashViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,6 +160,10 @@
 			dependencies = (
 			);
 			name = "Tigers Memory";
+			packageProductDependencies = (
+				F1240A692AEA22AE00FE3C3E /* SnapKit */,
+				F1240A6B2AEA22AE00FE3C3E /* SnapKit-Dynamic */,
+			);
 			productName = "Tigers Memory";
 			productReference = F1240A402AEA1E9600FE3C3E /* Tigers Memory.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +192,9 @@
 				Base,
 			);
 			mainGroup = F1240A372AEA1E9600FE3C3E;
+			packageReferences = (
+				F1240A682AEA22AE00FE3C3E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F1240A412AEA1E9600FE3C3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -212,7 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1240A482AEA1E9600FE3C3E /* ViewController.swift in Sources */,
+				F1240A482AEA1E9600FE3C3E /* SplashViewController.swift in Sources */,
 				F1240A622AEA21BC00FE3C3E /* AppColor.swift in Sources */,
 				F1240A442AEA1E9600FE3C3E /* AppDelegate.swift in Sources */,
 				F1240A462AEA1E9600FE3C3E /* SceneDelegate.swift in Sources */,
@@ -429,6 +440,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1240A682AEA22AE00FE3C3E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1240A692AEA22AE00FE3C3E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1240A682AEA22AE00FE3C3E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F1240A6B2AEA22AE00FE3C3E /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1240A682AEA22AE00FE3C3E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1240A382AEA1E9600FE3C3E /* Project object */;
 }
