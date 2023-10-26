@@ -53,4 +53,5 @@ enum AppImage: String, AppImageProtocol {
     case backgroundMenu
     case backgroundLoader
     case background
+    case backgroundProgress
 }

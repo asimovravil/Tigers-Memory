@@ -124,7 +124,8 @@ final class MainViewController: UIViewController {
     }
     
     @objc private func progressButtonTapped() {
-
+        let controller = ProgressViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func privacyPolicyButtonTapped() {
