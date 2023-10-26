@@ -33,6 +33,15 @@ enum AppImage: String, AppImageProtocol {
     
     // MARK: - AppImage
     
-    case backgroundLoader
     case splashLoading
+    case playButton
+    case shopButton
+    case rulesButton
+    case progressButton
+    case privacyPolicy
+    
+    // MARK: - Background
+    
+    case backgroundMenu
+    case backgroundLoader
 }

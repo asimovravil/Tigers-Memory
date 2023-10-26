@@ -58,6 +58,7 @@
 		F1240ABA2AEA3C0100FE3C3E /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1240AB92AEA3C0100FE3C3E /* FirebaseRemoteConfigSwift */; };
 		F1240ABC2AEA3C0100FE3C3E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F1240ABB2AEA3C0100FE3C3E /* FirebaseStorage */; };
 		F1240ABE2AEA3C0100FE3C3E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F1240ABD2AEA3C0100FE3C3E /* FirebaseStorageCombine-Community */; };
+		F1240AC12AEA4AB100FE3C3E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC02AEA4AB100FE3C3E /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		F1240A792AEA26C600FE3C3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1240A7B2AEA26D900FE3C3E /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		F1240A7D2AEA26E500FE3C3E /* ExternalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalService.swift; sourceTree = "<group>"; };
+		F1240AC02AEA4AB100FE3C3E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				F1240A762AEA267900FE3C3E /* SplashScreen */,
+				F1240ABF2AEA4A9E00FE3C3E /* MainModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,6 +237,14 @@
 				F1240A772AEA269900FE3C3E /* LoadingViewController.swift */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		F1240ABF2AEA4A9E00FE3C3E /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				F1240AC02AEA4AB100FE3C3E /* MainViewController.swift */,
+			);
+			path = MainModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +370,7 @@
 				F1240A7C2AEA26D900FE3C3E /* AppStorage.swift in Sources */,
 				F1240A7E2AEA26E500FE3C3E /* ExternalService.swift in Sources */,
 				F1240A462AEA1E9600FE3C3E /* SceneDelegate.swift in Sources */,
+				F1240AC12AEA4AB100FE3C3E /* MainViewController.swift in Sources */,
 				F1240A642AEA21CF00FE3C3E /* AppImage.swift in Sources */,
 				F1240A782AEA269900FE3C3E /* LoadingViewController.swift in Sources */,
 			);
