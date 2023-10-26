@@ -90,5 +90,7 @@ enum AppImage: String, AppImageProtocol {
     case fishCell
     case crazyCell
     case houseCell
+    case catCell
+    case ballsCell
     case cell
 }

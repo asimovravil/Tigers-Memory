@@ -10,6 +10,26 @@ import SnapKit
 
 final class GameViewController: UIViewController {
     
+    let images = [
+        AppImage.chairCell.uiImage,
+        AppImage.coinCell.uiImage,
+        AppImage.boxCell.uiImage,
+        AppImage.frogCell.uiImage,
+        AppImage.inyanCell.uiImage,
+        AppImage.cloudCell.uiImage,
+        AppImage.petrCell.uiImage,
+        AppImage.flagCell.uiImage,
+        AppImage.megaballsCell.uiImage,
+        AppImage.orangeCell.uiImage,
+        AppImage.fishCell.uiImage,
+        AppImage.crazyCell.uiImage,
+        AppImage.houseCell.uiImage,
+        AppImage.catCell.uiImage,
+        AppImage.ballsCell.uiImage
+    ]
+    
+    var shuffledImages: [UIImage?] = []
+    
     // MARK: - UI
     
     private lazy var backgroundView: UIImageView = {
@@ -41,6 +61,7 @@ final class GameViewController: UIViewController {
         
         setupViews()
         setupConstraints()
+        shuffledImages = images.shuffled()
     }
     
     // MARK: - setupViews
@@ -68,7 +89,7 @@ final class GameViewController: UIViewController {
 
 extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return shuffledImages.count * 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -78,7 +99,12 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         ) as? GameCollectionViewCell else {
             fatalError("Could not cast to GameCollectionViewCell")
         }
+
+        let imageIndex = indexPath.item % shuffledImages.count
+        cell.cellImage.image = shuffledImages[imageIndex]
+
         cell.backgroundColor = .clear
         return cell
     }
+
 }
