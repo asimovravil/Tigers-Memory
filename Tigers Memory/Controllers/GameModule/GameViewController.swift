@@ -29,6 +29,7 @@ final class GameViewController: UIViewController {
     ]
     
     var shuffledImages: [UIImage?] = []
+    var selectedCells: [GameCollectionViewCell] = []
     
     // MARK: - UI
     
@@ -103,8 +104,48 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let imageIndex = indexPath.item % shuffledImages.count
         cell.cellImage.image = shuffledImages[imageIndex]
 
+        
+        cell.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped(_:)))
+        cell.addGestureRecognizer(tapGesture)
         cell.backgroundColor = .clear
         return cell
     }
+    
+    @objc func cellTapped(_ sender: UITapGestureRecognizer) {
+        if let tappedCell = sender.view as? GameCollectionViewCell {
+            // Проверяем, не открыта ли уже эта ячейка
+            if !tappedCell.isFlipped {
+                // Открываем ячейку и добавляем ее в массив выбранных ячеек
+                tappedCell.flip()
+                selectedCells.append(tappedCell)
 
+                // Если выбрано две ячейки, сравниваем их
+                if selectedCells.count == 2 {
+                    checkForMatch()
+                }
+            }
+        }
+    }
+    
+    func checkForMatch() {
+        if selectedCells.count == 2 {
+            let cell1 = selectedCells[0]
+            let cell2 = selectedCells[1]
+
+            if cell1.cellImage.image == cell2.cellImage.image {
+                // Если изображения совпадают, то это пара, их можно оставить открытыми
+                // Очистите массив выбранных ячеек
+                selectedCells.removeAll()
+            } else {
+                // Если изображения не совпадают, переверните ячейки обратно через некоторое время
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    cell1.flip()
+                    cell2.flip()
+                    // Очистите массив выбранных ячеек
+                    self.selectedCells.removeAll()
+                }
+            }
+        }
+    }
 }

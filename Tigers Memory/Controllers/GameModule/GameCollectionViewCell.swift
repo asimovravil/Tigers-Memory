@@ -10,6 +10,8 @@ import SnapKit
 
 final class GameCollectionViewCell: UICollectionViewCell {
     
+    var isCellOpen: Bool = false
+    var isFlipped: Bool = false
     static let reuseID = String(describing: GameCollectionViewCell.self)
     
     // MARK: - UI
@@ -48,6 +50,15 @@ final class GameCollectionViewCell: UICollectionViewCell {
     private func setupConstraints() {
         cellImage.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+    }
+    
+    func flip() {
+        isFlipped = !isFlipped
+        if isFlipped {
+            UIView.transition(with: cellImage, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+        } else {
+            UIView.transition(with: cellImage, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
         }
     }
 }
