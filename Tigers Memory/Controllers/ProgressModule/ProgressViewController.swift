@@ -25,6 +25,7 @@ final class ProgressViewController: UIViewController {
 
         setupViews()
         setupConstraints()
+        setupNavigationBar()
     }
     
     // MARK: - setupViews
@@ -41,6 +42,18 @@ final class ProgressViewController: UIViewController {
         backgroundView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    // MARK: - setupNavigationBar
+    
+    private func setupNavigationBar() {
+        let backButton = UIBarButtonItem(image: AppImage.backNavigationButton.uiImage, style: .plain, target: self, action: #selector(backButtonTapped))
+        navigationItem.leftBarButtonItem = backButton
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+
+    @objc private func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
