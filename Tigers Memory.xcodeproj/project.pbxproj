@@ -62,6 +62,7 @@
 		F1240AC42AEA4E7000FE3C3E /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC32AEA4E7000FE3C3E /* RulesViewController.swift */; };
 		F1240AC72AEA50E100FE3C3E /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC62AEA50E100FE3C3E /* ShopViewController.swift */; };
 		F1240ACA2AEA61D700FE3C3E /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC92AEA61D700FE3C3E /* ProgressViewController.swift */; };
+		F1240ACD2AEA8BB600FE3C3E /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240ACC2AEA8BB600FE3C3E /* WinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		F1240AC32AEA4E7000FE3C3E /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		F1240AC62AEA50E100FE3C3E /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		F1240AC92AEA61D700FE3C3E /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		F1240ACC2AEA8BB600FE3C3E /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				F1240AC22AEA4E2800FE3C3E /* RulesModule */,
 				F1240AC52AEA50B600FE3C3E /* ShopModule */,
 				F1240AC82AEA61C000FE3C3E /* ProgressModule */,
+				F1240ACB2AEA8B9800FE3C3E /* WinModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +281,14 @@
 				F1240AC92AEA61D700FE3C3E /* ProgressViewController.swift */,
 			);
 			path = ProgressModule;
+			sourceTree = "<group>";
+		};
+		F1240ACB2AEA8B9800FE3C3E /* WinModule */ = {
+			isa = PBXGroup;
+			children = (
+				F1240ACC2AEA8BB600FE3C3E /* WinViewController.swift */,
+			);
+			path = WinModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1240AC42AEA4E7000FE3C3E /* RulesViewController.swift in Sources */,
+				F1240ACD2AEA8BB600FE3C3E /* WinViewController.swift in Sources */,
 				F1240A482AEA1E9600FE3C3E /* SplashViewController.swift in Sources */,
 				F1240AC72AEA50E100FE3C3E /* ShopViewController.swift in Sources */,
 				F1240ACA2AEA61D700FE3C3E /* ProgressViewController.swift in Sources */,
