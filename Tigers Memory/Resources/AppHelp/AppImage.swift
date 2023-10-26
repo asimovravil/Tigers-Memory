@@ -41,6 +41,12 @@ enum AppImage: String, AppImageProtocol {
     case privacyPolicy
     case cardRules
     case backNavigationButton
+    case cardShop
+    case selectButton
+    case cardSelectShop
+    case buyButton
+    case coinWalletImage
+    case coinSolo
     
     // MARK: - Background
     

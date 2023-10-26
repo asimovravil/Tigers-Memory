@@ -60,6 +60,7 @@
 		F1240ABE2AEA3C0100FE3C3E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F1240ABD2AEA3C0100FE3C3E /* FirebaseStorageCombine-Community */; };
 		F1240AC12AEA4AB100FE3C3E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC02AEA4AB100FE3C3E /* MainViewController.swift */; };
 		F1240AC42AEA4E7000FE3C3E /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC32AEA4E7000FE3C3E /* RulesViewController.swift */; };
+		F1240AC72AEA50E100FE3C3E /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240AC62AEA50E100FE3C3E /* ShopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		F1240A7D2AEA26E500FE3C3E /* ExternalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalService.swift; sourceTree = "<group>"; };
 		F1240AC02AEA4AB100FE3C3E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F1240AC32AEA4E7000FE3C3E /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		F1240AC62AEA50E100FE3C3E /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				F1240A762AEA267900FE3C3E /* SplashScreen */,
 				F1240ABF2AEA4A9E00FE3C3E /* MainModule */,
 				F1240AC22AEA4E2800FE3C3E /* RulesModule */,
+				F1240AC52AEA50B600FE3C3E /* ShopModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +259,14 @@
 				F1240AC32AEA4E7000FE3C3E /* RulesViewController.swift */,
 			);
 			path = RulesModule;
+			sourceTree = "<group>";
+		};
+		F1240AC52AEA50B600FE3C3E /* ShopModule */ = {
+			isa = PBXGroup;
+			children = (
+				F1240AC62AEA50E100FE3C3E /* ShopViewController.swift */,
+			);
+			path = ShopModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +388,7 @@
 			files = (
 				F1240AC42AEA4E7000FE3C3E /* RulesViewController.swift in Sources */,
 				F1240A482AEA1E9600FE3C3E /* SplashViewController.swift in Sources */,
+				F1240AC72AEA50E100FE3C3E /* ShopViewController.swift in Sources */,
 				F1240A622AEA21BC00FE3C3E /* AppColor.swift in Sources */,
 				F1240A442AEA1E9600FE3C3E /* AppDelegate.swift in Sources */,
 				F1240A7C2AEA26D900FE3C3E /* AppStorage.swift in Sources */,

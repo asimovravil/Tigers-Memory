@@ -114,7 +114,8 @@ final class MainViewController: UIViewController {
     }
     
     @objc private func shopButtonTapped() {
-
+        let controller = ShopViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func rulesButtonTapped() {
