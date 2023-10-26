@@ -110,7 +110,8 @@ final class MainViewController: UIViewController {
     // MARK: - Actions
     
     @objc private func playButtonTapped() {
-
+        let controller = LevelViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func shopButtonTapped() {

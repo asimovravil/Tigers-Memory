@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             } else {
                 if !AppStorage.isOnboardingShowed {
                     self?.navigation = UINavigationController(
-                        rootViewController: WheelViewController()
+                        rootViewController: MainViewController()
                     )
                 }
                 self?.window?.rootViewController = self?.navigation
