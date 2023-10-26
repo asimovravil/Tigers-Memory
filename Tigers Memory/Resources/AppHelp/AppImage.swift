@@ -47,6 +47,9 @@ enum AppImage: String, AppImageProtocol {
     case buyButton
     case coinWalletImage
     case coinSolo
+    case rewardChair
+    case rewardCat
+    case rewardFrog
     
     // MARK: - Background
     
@@ -55,5 +58,5 @@ enum AppImage: String, AppImageProtocol {
     case background
     case backgroundProgress
     case backgroundWin
-    case backgroundWewProgress
+    case backgroundNewProgress
 }
