@@ -12,6 +12,10 @@
 		F1240A482AEA1E9600FE3C3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240A472AEA1E9600FE3C3E /* ViewController.swift */; };
 		F1240A4D2AEA1E9800FE3C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1240A4C2AEA1E9800FE3C3E /* Assets.xcassets */; };
 		F1240A502AEA1E9800FE3C3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1240A4E2AEA1E9800FE3C3E /* LaunchScreen.storyboard */; };
+		F1240A5E2AEA216100FE3C3E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1240A5D2AEA216100FE3C3E /* Colors.xcassets */; };
+		F1240A622AEA21BC00FE3C3E /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240A612AEA21BC00FE3C3E /* AppColor.swift */; };
+		F1240A642AEA21CF00FE3C3E /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1240A632AEA21CF00FE3C3E /* AppImage.swift */; };
+		F1240A672AEA222900FE3C3E /* chowfun.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1240A662AEA222900FE3C3E /* chowfun.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		F1240A4C2AEA1E9800FE3C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1240A4F2AEA1E9800FE3C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1240A512AEA1E9800FE3C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1240A5D2AEA216100FE3C3E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F1240A612AEA21BC00FE3C3E /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		F1240A632AEA21CF00FE3C3E /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
+		F1240A662AEA222900FE3C3E /* chowfun.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chowfun.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +91,9 @@
 		F1240A592AEA201100FE3C3E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F1240A602AEA217B00FE3C3E /* AppFonts  */,
 				F1240A5A2AEA201A00FE3C3E /* AppAsset */,
+				F1240A5F2AEA217400FE3C3E /* AppHelp */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -92,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F1240A4C2AEA1E9800FE3C3E /* Assets.xcassets */,
+				F1240A5D2AEA216100FE3C3E /* Colors.xcassets */,
 			);
 			path = AppAsset;
 			sourceTree = "<group>";
@@ -110,6 +121,23 @@
 				F1240A512AEA1E9800FE3C3E /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F1240A5F2AEA217400FE3C3E /* AppHelp */ = {
+			isa = PBXGroup;
+			children = (
+				F1240A612AEA21BC00FE3C3E /* AppColor.swift */,
+				F1240A632AEA21CF00FE3C3E /* AppImage.swift */,
+			);
+			path = AppHelp;
+			sourceTree = "<group>";
+		};
+		F1240A602AEA217B00FE3C3E /* AppFonts  */ = {
+			isa = PBXGroup;
+			children = (
+				F1240A662AEA222900FE3C3E /* chowfun.ttf */,
+			);
+			path = "AppFonts ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1240A5E2AEA216100FE3C3E /* Colors.xcassets in Resources */,
+				F1240A672AEA222900FE3C3E /* chowfun.ttf in Resources */,
 				F1240A502AEA1E9800FE3C3E /* LaunchScreen.storyboard in Resources */,
 				F1240A4D2AEA1E9800FE3C3E /* Assets.xcassets in Resources */,
 			);
@@ -183,8 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1240A482AEA1E9600FE3C3E /* ViewController.swift in Sources */,
+				F1240A622AEA21BC00FE3C3E /* AppColor.swift in Sources */,
 				F1240A442AEA1E9600FE3C3E /* AppDelegate.swift in Sources */,
 				F1240A462AEA1E9600FE3C3E /* SceneDelegate.swift in Sources */,
+				F1240A642AEA21CF00FE3C3E /* AppImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
