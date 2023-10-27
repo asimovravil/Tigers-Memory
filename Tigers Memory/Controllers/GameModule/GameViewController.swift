@@ -30,6 +30,7 @@ final class GameViewController: UIViewController {
     
     var shuffledImages: [UIImage?] = []
     var selectedCells: [GameCollectionViewCell] = []
+    var cellStatus: [Bool] = []
     
     // MARK: - UI
     
@@ -63,6 +64,7 @@ final class GameViewController: UIViewController {
         setupViews()
         setupConstraints()
         shuffledImages = images.shuffled()
+        cellStatus = Array(repeating: false, count: shuffledImages.count * 2)
     }
     
     // MARK: - setupViews
@@ -102,9 +104,12 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
 
         let imageIndex = indexPath.item % shuffledImages.count
-        cell.cellImage.image = shuffledImages[imageIndex]
+        if cellStatus[indexPath.item] {
+            cell.cellImage.image = shuffledImages[imageIndex]
+        } else {
+            cell.cellImage.image = AppImage.cell.uiImage
+        }
 
-        
         cell.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped(_:)))
         cell.addGestureRecognizer(tapGesture)
@@ -114,36 +119,46 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     @objc func cellTapped(_ sender: UITapGestureRecognizer) {
         if let tappedCell = sender.view as? GameCollectionViewCell {
-            // Проверяем, не открыта ли уже эта ячейка
             if !tappedCell.isFlipped {
-                // Открываем ячейку и добавляем ее в массив выбранных ячеек
                 tappedCell.flip()
                 selectedCells.append(tappedCell)
-
-                // Если выбрано две ячейки, сравниваем их
+                
                 if selectedCells.count == 2 {
                     checkForMatch()
+                }
+                
+                let indexPath = collectionView.indexPath(for: tappedCell)
+                if let item = indexPath?.item {
+                    let imageIndex = item % shuffledImages.count
+                    tappedCell.cellImage.image = shuffledImages[imageIndex]
+                    cellStatus[item] = true
                 }
             }
         }
     }
-    
+
     func checkForMatch() {
         if selectedCells.count == 2 {
             let cell1 = selectedCells[0]
             let cell2 = selectedCells[1]
 
-            if cell1.cellImage.image == cell2.cellImage.image {
-                // Если изображения совпадают, то это пара, их можно оставить открытыми
-                // Очистите массив выбранных ячеек
+            let imageIndex1 = collectionView.indexPath(for: cell1)!.item % shuffledImages.count
+            let imageIndex2 = collectionView.indexPath(for: cell2)!.item % shuffledImages.count
+
+            if shuffledImages[imageIndex1] == shuffledImages[imageIndex2] {
                 selectedCells.removeAll()
             } else {
-                // Если изображения не совпадают, переверните ячейки обратно через некоторое время
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     cell1.flip()
                     cell2.flip()
-                    // Очистите массив выбранных ячеек
                     self.selectedCells.removeAll()
+                    if let indexPath1 = self.collectionView.indexPath(for: cell1),
+                       let indexPath2 = self.collectionView.indexPath(for: cell2) {
+                        self.cellStatus[indexPath1.item] = false
+                        self.cellStatus[indexPath2.item] = false
+                        cell1.cellImage.image = AppImage.cell.uiImage
+                        cell2.cellImage.image = AppImage.cell.uiImage
+                    }
                 }
             }
         }
