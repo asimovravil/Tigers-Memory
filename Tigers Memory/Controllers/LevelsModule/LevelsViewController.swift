@@ -185,6 +185,11 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
             } else {
                 cell.levelButton.setBackgroundImage(nil, for: .normal)
             }
+            
+            cell.levelButtonTappedHandler = {
+                let controller = GameViewController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
             return cell
         }
     }

@@ -65,6 +65,7 @@ final class GameViewController: UIViewController {
         
         setupViews()
         setupConstraints()
+        setupNavigationBar()
         shuffledImages = images.shuffled()
         cellStatus = Array(repeating: false, count: shuffledImages.count * 2)
     }
@@ -89,6 +90,18 @@ final class GameViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-25)
             make.bottom.equalToSuperview().offset(-150)
         }
+    }
+    
+    // MARK: - setupNavigationBar
+    
+    private func setupNavigationBar() {
+        let backButton = UIBarButtonItem(image: AppImage.backNavigationButton.uiImage, style: .plain, target: self, action: #selector(backButtonTapped))
+        navigationItem.leftBarButtonItem = backButton
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+
+    @objc private func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -156,11 +169,8 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 selectedCells.removeAll()
                 canOpenCells = true
                 numberOfPairsSolved += 1
-                
-                if numberOfPairsSolved * 2 == shuffledImages.count {
-                    let wheelViewController = WheelViewController()
-                    navigationController?.pushViewController(wheelViewController, animated: true)
-                }
+
+                checkForGameCompletion()
             } else {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     cell1.flip()
@@ -175,6 +185,15 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                         self.canOpenCells = true
                     }
                 }
+            }
+        }
+    }
+    
+    func checkForGameCompletion() {
+        if numberOfPairsSolved == shuffledImages.count {
+            if let navigationController = self.navigationController {
+                let wheelViewController = WheelViewController()
+                navigationController.pushViewController(wheelViewController, animated: true)
             }
         }
     }

@@ -33,6 +33,7 @@ final class WheelViewController: UIViewController {
 
         setupViews()
         setupConstraints()
+        setupNavigationBar()
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(showWinViewController), userInfo: nil, repeats: false)
     }
     
@@ -55,6 +56,18 @@ final class WheelViewController: UIViewController {
             make.centerY.equalToSuperview()
             make.centerX.equalToSuperview()
         }
+    }
+    
+    // MARK: - setupNavigationBar
+    
+    private func setupNavigationBar() {
+        let backButton = UIBarButtonItem(image: AppImage.backNavigationButton.uiImage, style: .plain, target: self, action: #selector(backButtonTapped))
+        navigationItem.leftBarButtonItem = backButton
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+
+    @objc private func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Action
