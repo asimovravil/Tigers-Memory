@@ -31,6 +31,8 @@ final class GameViewController: UIViewController {
     var shuffledImages: [UIImage?] = []
     var selectedCells: [GameCollectionViewCell] = []
     var cellStatus: [Bool] = []
+    var canOpenCells: Bool = true
+    var numberOfPairsSolved: Int = 0
     
     // MARK: - UI
     
@@ -118,24 +120,29 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     @objc func cellTapped(_ sender: UITapGestureRecognizer) {
-        if let tappedCell = sender.view as? GameCollectionViewCell {
-            if !tappedCell.isFlipped {
-                tappedCell.flip()
-                selectedCells.append(tappedCell)
-                
-                if selectedCells.count == 2 {
-                    checkForMatch()
-                }
-                
-                let indexPath = collectionView.indexPath(for: tappedCell)
-                if let item = indexPath?.item {
-                    let imageIndex = item % shuffledImages.count
-                    tappedCell.cellImage.image = shuffledImages[imageIndex]
-                    cellStatus[item] = true
+            if !canOpenCells {
+                return
+            }
+            
+            if let tappedCell = sender.view as? GameCollectionViewCell {
+                if !tappedCell.isFlipped {
+                    tappedCell.flip()
+                    selectedCells.append(tappedCell)
+                    
+                    if selectedCells.count == 2 {
+                        canOpenCells = false
+                        checkForMatch()
+                    }
+                    
+                    let indexPath = collectionView.indexPath(for: tappedCell)
+                    if let item = indexPath?.item {
+                        let imageIndex = item % shuffledImages.count
+                        tappedCell.cellImage.image = shuffledImages[imageIndex]
+                        cellStatus[item] = true
+                    }
                 }
             }
         }
-    }
 
     func checkForMatch() {
         if selectedCells.count == 2 {
@@ -147,6 +154,15 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
             if shuffledImages[imageIndex1] == shuffledImages[imageIndex2] {
                 selectedCells.removeAll()
+                canOpenCells = true // Разрешаем открывать новые ячейки
+                numberOfPairsSolved += 1
+                
+                if numberOfPairsSolved * 2 == shuffledImages.count {
+                    // Все пары были разгаданы, переходите на WheelViewController
+                    let wheelViewController = WheelViewController() // Инициализируйте WheelViewController
+                    // Выполните переход на WheelViewController (например, путем навигации)
+                    navigationController?.pushViewController(wheelViewController, animated: true)
+                }
             } else {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     cell1.flip()
@@ -158,6 +174,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                         self.cellStatus[indexPath2.item] = false
                         cell1.cellImage.image = AppImage.cell.uiImage
                         cell2.cellImage.image = AppImage.cell.uiImage
+                        self.canOpenCells = true 
                     }
                 }
             }
