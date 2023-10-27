@@ -48,8 +48,7 @@ final class GameViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 1
-        layout.itemSize = CGSize(width: 60, height: 68) // Здесь установите нужные вам размеры
-
+        layout.itemSize = CGSize(width: 60, height: 68)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(GameCollectionViewCell.self, forCellWithReuseIdentifier: GameCollectionViewCell.reuseID)
         collectionView.delegate = self
