@@ -18,6 +18,13 @@ final class WinViewController: UIViewController {
         return imageView
     }()
     
+    private lazy var tigrButton: UIButton = {
+        let button = UIButton()
+        button.setImage(AppImage.tigrButton.uiImage, for: .normal)
+        button.addTarget(self, action: #selector(tigrButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -30,7 +37,7 @@ final class WinViewController: UIViewController {
     // MARK: - setupViews
     
     private func setupViews() {
-        [backgroundView].forEach() {
+        [backgroundView, tigrButton].forEach() {
             view.addSubview($0)
         }
     }
@@ -41,6 +48,23 @@ final class WinViewController: UIViewController {
         backgroundView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        tigrButton.snp.makeConstraints { make in
+            if UIScreen.main.bounds.size.height >= 812 {
+                make.bottom.equalToSuperview()
+            } else {
+                make.bottom.equalToSuperview()
+                make.height.equalTo(450)
+            }
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func tigrButtonTapped() {
+        let controller = RewardsViewController()
+        controller.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 

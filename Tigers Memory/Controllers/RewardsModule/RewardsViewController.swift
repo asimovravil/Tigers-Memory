@@ -26,11 +26,10 @@ final class RewardsViewController: UIViewController {
         return imageView
     }()
     
-    private lazy var rewardView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.layer.masksToBounds = true
-        imageView.contentMode = .scaleAspectFill
-        return imageView
+    private lazy var rewardButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(rewardButtonTapped), for: .touchUpInside)
+        return button
     }()
     
     // MARK: - Lifecycle
@@ -42,14 +41,14 @@ final class RewardsViewController: UIViewController {
         setupConstraints()
         
         if let randomRewardImage = rewards.randomElement() {
-            rewardView.image = randomRewardImage
+            rewardButton.setImage(randomRewardImage, for: .normal)
         }
     }
     
     // MARK: - setupViews
     
     private func setupViews() {
-        [backgroundView, rewardView].forEach() {
+        [backgroundView, rewardButton].forEach() {
             view.addSubview($0)
         }
     }
@@ -58,7 +57,7 @@ final class RewardsViewController: UIViewController {
         backgroundView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        rewardView.snp.makeConstraints { make in
+        rewardButton.snp.makeConstraints { make in
             if UIScreen.main.bounds.size.height >= 812 {
                 make.bottom.equalToSuperview().offset(-200)
             } else {
@@ -70,8 +69,8 @@ final class RewardsViewController: UIViewController {
     
     // MARK: - Actions
     
-    @objc private func getButtonTapped() {
-        let controller = WinViewController()
+    @objc private func rewardButtonTapped() {
+        let controller = MainViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }

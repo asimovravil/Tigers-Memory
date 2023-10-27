@@ -51,6 +51,7 @@ enum AppImage: String, AppImageProtocol {
     case rewardCat
     case rewardFrog
     case fortuna
+    case tigrButton
     
     // MARK: - Background
     
