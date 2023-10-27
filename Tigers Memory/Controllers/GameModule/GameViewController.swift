@@ -151,6 +151,9 @@ final class GameViewController: UIViewController {
         let backButton = UIBarButtonItem(image: AppImage.backNavigationButton.uiImage, style: .plain, target: self, action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem = backButton
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        let coinWalletBarButtonItem = UIBarButtonItem(customView: coinWalletStackView)
+        navigationItem.rightBarButtonItem = coinWalletBarButtonItem
     }
 
     @objc private func backButtonTapped() {
