@@ -154,13 +154,11 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
             if shuffledImages[imageIndex1] == shuffledImages[imageIndex2] {
                 selectedCells.removeAll()
-                canOpenCells = true // Разрешаем открывать новые ячейки
+                canOpenCells = true
                 numberOfPairsSolved += 1
                 
                 if numberOfPairsSolved * 2 == shuffledImages.count {
-                    // Все пары были разгаданы, переходите на WheelViewController
-                    let wheelViewController = WheelViewController() // Инициализируйте WheelViewController
-                    // Выполните переход на WheelViewController (например, путем навигации)
+                    let wheelViewController = WheelViewController()
                     navigationController?.pushViewController(wheelViewController, animated: true)
                 }
             } else {
@@ -174,7 +172,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                         self.cellStatus[indexPath2.item] = false
                         cell1.cellImage.image = AppImage.cell.uiImage
                         cell2.cellImage.image = AppImage.cell.uiImage
-                        self.canOpenCells = true 
+                        self.canOpenCells = true
                     }
                 }
             }
