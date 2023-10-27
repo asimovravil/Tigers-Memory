@@ -46,8 +46,9 @@ final class GameViewController: UIViewController {
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 1
+        layout.minimumLineSpacing = 1
+        layout.itemSize = CGSize(width: 60, height: 68) // Здесь установите нужные вам размеры
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(GameCollectionViewCell.self, forCellWithReuseIdentifier: GameCollectionViewCell.reuseID)
@@ -63,7 +64,7 @@ final class GameViewController: UIViewController {
         label.text = "Level"
         label.textAlignment = .center
         label.textColor = AppColor.whiteCustom.uiColor
-        label.font = UIFont(name: "chowfun", size: 44)
+        label.font = UIFont(name: "chowfun", size: 24)
         label.numberOfLines = 0
         return label
     }()
@@ -134,7 +135,7 @@ final class GameViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         collectionView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(150)
+            make.top.equalToSuperview().offset(200)
             make.leading.equalToSuperview().offset(25)
             make.trailing.equalToSuperview().offset(-25)
             make.bottom.equalToSuperview().offset(-150)

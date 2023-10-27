@@ -31,7 +31,7 @@ final class WheelViewController: UIViewController {
         label.text = "Level"
         label.textAlignment = .center
         label.textColor = AppColor.whiteCustom.uiColor
-        label.font = UIFont(name: "chowfun", size: 44)
+        label.font = UIFont(name: "chowfun", size: 24)
         label.numberOfLines = 0
         return label
     }()
